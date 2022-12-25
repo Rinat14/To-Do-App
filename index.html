@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+		integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="./css/styles.css">
+	<title>To-Do App</title>
+</head>
+<body>
+	<div id="app" class="container">
+		<div class="wrapper">
+			<header class="header">
+				<h1 id="title" class="header__title"></h1>
+				<div class="header__counter counter">
+					<span class="counter__incomplete"><span id="incomplete-counter"></span> incomplete, </span>
+					<span class="counter__completed"><span id="completed-counter"></span> completed</span>
+				</div>
+			</header>
+			<main class="main">
+				<article class="list">
+					<div class="list__incomplete incomplete">
+						<h2 class="incomplete__title">Incomplete</h2>
+						<ul class="incomplete__list" id="incomplete-list"></ul>
+					</div>
+					<div class="list__completed completed">
+						<h2 class="completed__title">Completed</h2>
+						<ul class="completed__list" id="completed-item">
+							<li class="completed__list-item">
+								<label style="position: relative;">
+								<div class="checkbox-block com">
+									<i class="fa-solid fa-check check__icon"></i>
+									<input class="checkbox" id="completed-checkbox" type="checkbox" checked name="checkbox">
+									</div>
+								<span class="completed__todo-task">Upload 1099-R to TurboTax</span>
+								</label>
+							</li>
+							<li class="completed__list-item">
+								<label style="position: relative;">
+								<div class="checkbox-block com">
+									<i class="fa-solid fa-check check__icon"></i>
+									<input class="checkbox" id="completed-checkbox" type="checkbox" checked name="checkbox">
+								</div>
+								<span class="completed__todo-task">Upload 1099-R to TurboTax</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+				</article>
+				<article class="add-task">
+					<div class="add-task__blocker"></div>
+					<div class="add-task__wrapper">
+						<div class="add-task__form fill-form">
+							<h2>Fill the gaps</h2>
+							<form action="" class="add-task__form">
+								<label class="labels">
+									<div>Task name</div>
+									<input id="task-name" type="text" name="task-name" placeholder="Task name" class="add-task__task-name">
+								</label>
+								<label class="labels">
+									<div>Task type</div>
+									<input id="task-type" type="text" name="task-type" placeholder="Task type" class="add-task__task-type">
+								</label>
+							</form>
+						</div>
+						<div class="add-task__btn-block">
+							<button class="add-task__btn" id="button">
+								<i class="fa-solid fa-plus"></i>
+							</button>
+						</div>
+					</div>
+				</article>
+			</main>
+		</div>
+	</div>
+
+	<script src="./js/creatingElement.js"></script>
+	<script src="./js/scripts.js"></script>
+</body>
+</html>
