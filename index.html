@@ -54,20 +54,32 @@
 					<div class="add-task__blocker"></div>
 					<div class="add-task__wrapper">
 						<div class="add-task__form fill-form">
-							<h2>Fill the gaps</h2>
-							<form action="" class="add-task__form">
-								<label class="labels">
-									<div>Task name</div>
-									<input id="task-name" type="text" name="task-name" placeholder="Task name" class="add-task__task-name">
-								</label>
-								<label class="labels">
-									<div>Task type</div>
-									<input id="task-type" type="text" name="task-type" placeholder="Task type" class="add-task__task-type">
-								</label>
+							<h2 class="fill-form__title">Fill the gaps</h2>
+							<form action="" class="fill-form__form">
+								<div class="fill-form__gap-block">
+									<label for="task-name" class="labels">
+										<div class="labels__item">Task name:</div>
+										<input id="task-name" type="text" name="task-name" placeholder="Task name" class="fill-form__task-name input">
+									</label>
+									<label for="task-type" class="labels">
+										<div class="labels__item">Task type:</div>
+										<input id="task-type" type="text" name="task-type" placeholder="Task type" class="fill-form__task-type input">
+									</label>
+								</div>
+								<div class="fill-form__button-block">
+									<button class="fill-form__btn btn">
+										Cancel
+										<i class="fa-brands fa-airbnb"></i>
+									</button>
+									<button class="fill-form__btn btn">
+										Add the task
+										<i class="fa-solid fa-list-check"></i>
+									</button>
+								</div>
 							</form>
 						</div>
 						<div class="add-task__btn-block">
-							<button class="add-task__btn" id="button">
+							<button class="add-task__button" id="button">
 								<i class="fa-solid fa-plus"></i>
 							</button>
 						</div>

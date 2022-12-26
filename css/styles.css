@@ -143,7 +143,6 @@ label {
 	width: 100%;
 	height: 100%;
 	position: relative;
-	background-color: #fff;
 }
 
 .add-task__blocker {
@@ -152,7 +151,7 @@ label {
 	position: fixed;
 	top: 0;
 	left: 0;
-	background-color: #3b3b3b96;
+	background-color: #3b3b3b67;
 	transform: scale(0);
 	transition: transform 0.3s ease-in-out;
 }
@@ -160,6 +159,102 @@ label {
 .add-task__wrapper {
 	width: 100%;
 	position: relative;
+}
+
+.add-task__form.fill-form {
+	width: 54%;
+	height: auto;
+	position: fixed;
+	top: 9rem;
+	left: 20rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 20px 40px;
+	border-radius: 30px;
+	background: linear-gradient(to top, #3F4EA0 0%, #473FA0 100%);
+	opacity: 0;
+	visibility: hidden;
+}
+
+.fill-form__title {
+	font-size: 36px;
+	color: #f1f1f1;
+	padding: 20px 0;
+}
+
+.fill-form__form {
+	width: 96%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 10px 0 30px;
+}
+
+.fill-form__gap-block {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.labels {
+	font-size: 20px;
+	font-weight: bold;
+	color: #f1f1f1;
+}
+
+.labels:last-child {
+	margin-left: 40px;
+}
+
+.labels__item {
+	margin-bottom: 10px;
+}
+
+.fill-form__task-name.input,
+.fill-form__task-type.input {
+	width: 280px;
+	height: 40px;
+	outline: none;
+	border: 2px solid #473FA0;
+	border-radius: 10px;
+	padding: 10px 15px;
+	background-color: #141419;
+	color: #f1f1f1;
+}
+
+.fill-form__task-name.input::placeholder,
+.fill-form__task-type.input::placeholder {
+	color: #f1f1f1;
+}
+
+.fill-form__button-block {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.fill-form__btn.btn {
+	padding: 12px 20px;
+	outline: none;
+	border: 1px solid #473FA0;
+	border-radius: 10px;
+	background-color: #f1f1f1;
+	color: #141419;
+	font-weight: 600;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.fill-form__btn.btn:last-child {
+	margin-left: 20rem;
+	background-color: #141419;
+	color: #f1f1f1;
 }
 
 .add-task__btn-block {
@@ -170,7 +265,7 @@ label {
 	left: 62rem;
 }
 
-.add-task__btn {
+.add-task__button {
 	width: 56px;
 	height: 56px;
 	display: flex;
