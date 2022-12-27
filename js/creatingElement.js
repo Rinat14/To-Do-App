@@ -43,17 +43,28 @@ function Create(type) {
 	}
 	function span() {
 		const spanTag = document.createElement('span');
+		const taskName = document.getElementById('task-name').value;
 		spanTag.classList.add('incomplete__todo-task');
+		spanTag.textContent = taskName;
 		return spanTag;
 	}
 	function p() {
 		const pTag = document.createElement('p');
+		const taskType = document.getElementById('task-type').value;
 		pTag.classList.add('incomplete__todo-type');
+		pTag.textContent = taskType;
 		return pTag;
 	}
 	this.build = function build() {
+		const taskName = document.getElementById('task-name').value;
+		const taskType = document.getElementById('task-type').value;
 		if (type === 'incomplete') {
-			incompleteList.append(li());
+			if (taskName != '' && taskType != '') {
+				incompleteList.append(li());
+			} else {
+				alert('You should fill the all gaps');
+				editingStyle(`visible`, `9rem`, `scale(1)`, `none`);
+			}
 		} else if (type === 'completed') {
 			completedList.append(li());
 		}
