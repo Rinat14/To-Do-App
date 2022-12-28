@@ -56,10 +56,10 @@ function Create(type) {
 		return pTag;
 	}
 	this.build = function build() {
-		const taskName = document.getElementById('task-name').value;
-		const taskType = document.getElementById('task-type').value;
+		const taskName = document.getElementById('task-name');
+		const taskType = document.getElementById('task-type');
 		if (type === 'incomplete') {
-			if (taskName != '' && taskType != '') {
+			if (taskName.value != '' && taskType.value != '') {
 				incompleteList.append(li());
 			} else {
 				alert('You should fill the all gaps');

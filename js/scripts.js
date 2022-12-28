@@ -35,8 +35,12 @@ function editingStyle(visibility, top, transform, display) {
 
 function add() {
 	btn.addEventListener('click', (event) => {
+		const taskName = document.getElementById('task-name');
+		const taskType = document.getElementById('task-type');
 		event.preventDefault();
 		editingStyle(`visible`, `9rem`, `scale(1)`, `none`);
+		taskName.value = 'Task name';
+		taskType.value = 'Task type';
 	});
 
 	cancelBtn.addEventListener('click', (event) => {
