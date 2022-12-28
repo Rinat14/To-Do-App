@@ -78,6 +78,29 @@ label {
 	margin-bottom: 20px;
 }
 
+.incomplete__title {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.incomplete__button {
+	width: auto;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	color: #fff;
+	border: 2px solid #fff;
+	border-radius: 30px;
+	background: linear-gradient(to top, #3F4EA0 0%, #473FA0 100%);
+	margin: 0;
+	padding: 5px 5px 3px;
+	cursor: pointer;
+}
+
 .incomplete__list,
 .completed__list {
 	padding-left: 10px;
@@ -257,29 +280,4 @@ label {
 	margin-left: 20rem;
 	background-color: #141419;
 	color: #f1f1f1;
-}
-
-.add-task__btn-block {
-	width: 100%;
-	height: auto;
-	background-color: #3f4ea0ee;
-	border-top: 3px solid #473FA0;
-	padding: 10px 20px;
-	position: fixed;
-	top: 34rem;
-	left: 0;
-}
-
-.add-task__button {
-	width: 200px;
-	height: 50px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 28px;
-	color: #fff;
-	border: 2px solid #fff;
-	border-radius: 30px;
-	background: linear-gradient(to top, #3F4EA0 0%, #473FA0 100%);
-	cursor: pointer;
 }

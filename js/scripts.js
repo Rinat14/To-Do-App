@@ -12,7 +12,6 @@ const title = document.getElementById('title');
 const btn = document.getElementById('button');
 const cancelBtn = document.getElementById('cancel');
 const addBtn = document.getElementById('add');
-const addBtnBlock = document.querySelector('.add-task__btn-block');
 
 function innerHTMLCounters() {
 	const incomplete = document.getElementById('incomplete-counter'),
@@ -25,12 +24,10 @@ function innerHTMLCounters() {
 	completed.innerHTML = `${completedListItems.length}`;
 }
 
-function editingStyle(visibility, top, transform, display) {
+function editingStyle(visibility, top, transform) {
 	formBlock.style.visibility = visibility;
 	formBlock.style.top = top;
 	blockerItem.style.transform = transform;
-	btn.style.display = display;
-	addBtnBlock.style.display = display;
 }
 
 function add() {
@@ -38,19 +35,19 @@ function add() {
 		const taskName = document.getElementById('task-name');
 		const taskType = document.getElementById('task-type');
 		event.preventDefault();
-		editingStyle(`visible`, `9rem`, `scale(1)`, `none`);
 		taskName.value = 'Task name';
 		taskType.value = 'Task type';
+		editingStyle(`visible`, `9rem`, `scale(1)`);
 	});
 
 	cancelBtn.addEventListener('click', (event) => {
 		event.preventDefault();
-		editingStyle(`hidden`, `-20rem`, `scale(0)`, `block`);
+		editingStyle(`hidden`, `-20rem`, `scale(0)`);
 	});
 
 	addBtn.addEventListener('click', (event) => {
 		event.preventDefault();
-		editingStyle(`hidden`, `-20rem`, `scale(0)`, `block`);
+		editingStyle(`hidden`, `-20rem`, `scale(0)`);
 
 		let creat = new Create('incomplete');
 		creat.build();
