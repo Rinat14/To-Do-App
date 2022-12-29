@@ -4,6 +4,8 @@ const incompleteList = document.getElementById('incomplete-list');
 const completedList = document.getElementById('completed-list');
 
 function Create(type) {
+	const className = type === 'completed' ? 'completed' : 'incomplete';
+
 	function li() {
 		const liTag = document.createElement('li');
 		if (type === 'incomplete') {
@@ -18,12 +20,8 @@ function Create(type) {
 		const labelTag = document.createElement('label');
 		labelTag.style.position = 'relative';
 		labelTag.append(div());
-		if (type === 'incomplete') {
-			labelTag.append(span());
-			labelTag.append(p());
-		} else if (type === 'completed') {
-			labelTag.append(span());
-		}
+		labelTag.append(span());
+		labelTag.append(p());
 		return labelTag;
 	}
 	function div() {
@@ -39,12 +37,21 @@ function Create(type) {
 		inputTag.classList.add('checkbox');
 		inputTag.setAttribute('id', 'incompleted-checkbox');
 		inputTag.setAttribute('type', 'checkbox');
+		inputTag.addEventListener('change', () => {
+			const fnc__chbx = new Checkbox(type);
+			fnc__chbx.checked();
+		});
+		if (type === 'completed') {
+			inputTag.setAttribute('checked', 'checked');
+		} else if (type === 'incomplete') {
+			inputTag.removeAttribute('checked');
+		}
 		return iTag, inputTag;
 	}
 	function span() {
 		const spanTag = document.createElement('span');
 		const taskName = document.getElementById('task-name').value;
-		spanTag.classList.add('incomplete__todo-task');
+		spanTag.classList.add(`${className}__todo-task`);
 		spanTag.textContent = taskName;
 		return spanTag;
 	}

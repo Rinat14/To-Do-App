@@ -33,14 +33,15 @@
 					</div>
 					<div class="list__completed completed">
 						<h2 class="completed__title">Completed</h2>
-						<ul class="completed__list" id="completed-item">
+						<ul class="completed__list" id="completed-list">
 							<li class="completed__list-item">
 								<label style="position: relative;">
-								<div class="checkbox-block com">
-									<i class="fa-solid fa-check check__icon"></i>
-									<input class="checkbox" id="completed-checkbox" type="checkbox" checked name="checkbox">
+									<div class="checkbox-block com">
+										<i class="fa-solid fa-check check__icon"></i>
+										<input class="checkbox" id="completed-checkbox" type="checkbox" checked name="checkbox">
 									</div>
-								<span class="completed__todo-task">Upload 1099-R to TurboTax</span>
+									<span class="completed__todo-task">Upload 1099-R to TurboTax</span>
+									<p class="incomplete__todo-type">💰 Finance</p>
 								</label>
 							</li>
 							<li class="completed__list-item">
@@ -89,6 +90,7 @@
 		</div>
 	</div>
 
+	<script src="./js/checkbox.js"></script>
 	<script src="./js/creatingElement.js"></script>
 	<script src="./js/scripts.js"></script>
 </body>

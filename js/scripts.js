@@ -35,9 +35,10 @@ function add() {
 		const taskName = document.getElementById('task-name');
 		const taskType = document.getElementById('task-type');
 		event.preventDefault();
+		editingStyle(`visible`, `9rem`, `scale(1)`);
+
 		taskName.value = 'Task name';
 		taskType.value = 'Task type';
-		editingStyle(`visible`, `9rem`, `scale(1)`);
 	});
 
 	cancelBtn.addEventListener('click', (event) => {
